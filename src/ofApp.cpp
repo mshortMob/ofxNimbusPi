@@ -58,6 +58,13 @@ void ofApp::keyPressed(int key){
                 }
             }
             break;
+        case ',':
+            for (unsigned int i =0; i<NUM_WARP_OBJECTS; i++){
+                if(warpObjects[i].warper.isActive()){
+                    warpObjects[i].warper.selectCorner(ofxGLWarper::TOP_LEFT);
+                }
+            }
+            break;
     }
 }
 //--------------------------------------------------------------
