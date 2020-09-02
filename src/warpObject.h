@@ -18,13 +18,13 @@ class warpObject {
     bool visible;
 
 	ofxGLWarper warper;
-    ofVideoPlayer vid;
     ofFbo mask;
 
     warpObject();
 
     private:
 
+    ofVideoPlayer vid;
     void drawMaskCircle(float w, float h);
     void drawMaskNone(float w, float h);
 };
