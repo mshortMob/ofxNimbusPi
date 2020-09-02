@@ -2,6 +2,9 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    for (unsigned int i =0; i<4; i++){
+        vidsList[i].load("videos/vid" + ofToString(i) + ".mp4");
+    }
     for (unsigned int i =0; i<NUM_WARP_OBJECTS; i++){
         warpObjects[i].setup(0);
     }

@@ -21,6 +21,7 @@ class ofApp : public ofBaseApp{
 		void mouseReleased();
 
 		warpObject warpObjects[NUM_WARP_OBJECTS];
+		ofVideoPlayer vidsList[4];
         // ofXml XML;
 		// ofFbo mask;
     	// int activeWarper;

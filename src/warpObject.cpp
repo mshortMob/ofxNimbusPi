@@ -29,7 +29,7 @@ void warpObject::draw(){
 void warpObject::changeVideo(){
     vidNumber=(vidNumber+1)%4;
     vid.close();
-    vid.load("videos/vid" + ofToString(vidNumber) + ".mp4");
+    vid.loadAsync("videos/vid" + ofToString(vidNumber) + ".mp4");
 }
 
 void warpObject::changeMask(){
