@@ -28,10 +28,8 @@ void warpObject::draw(){
 
 void warpObject::changeVideo(){
     vidNumber=(vidNumber+1)%4;
-    vid.stop();
     vid.close();
     vid.load("videos/vid" + ofToString(vidNumber) + ".mp4");
-    vid.play();
 }
 
 void warpObject::changeMask(){
