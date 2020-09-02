@@ -8,6 +8,7 @@ void warpObject::setup(int vidNum){
     vidNumber=vidNum;
     visible=true;
     vid.load("videos/vid" + ofToString(vidNumber) + ".mp4");
+    vid.setLoopState(OF_LOOP_NORMAL);
     vid.play();
     warper.setup(vid.getWidth(),vid.getHeight(),vid.getWidth(), vid.getHeight());
 
@@ -30,6 +31,7 @@ void warpObject::changeVideo(){
     vidNumber=(vidNumber+1)%4;
     vid.close();
     vid.load("videos/vid" + ofToString(vidNumber) + ".mp4");
+    vid.setLoopState(OF_LOOP_NORMAL);
     vid.play();
 }
 
@@ -63,6 +65,7 @@ void warpObject::toggleVisible(){
     visible=!visible;
     if(visible){
         vid.load("videos/vid" + ofToString(vidNumber) + ".mp4");
+        vid.setLoopState(OF_LOOP_NORMAL);
         vid.play();
     }else{
         vid.close();
